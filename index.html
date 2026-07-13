@@ -28,6 +28,12 @@
         </a>
       </div>
 
+      <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="header-group header-right">
         <a href="about.html">ABOUT US</a>
         <a href="contact.html">CONTACT</a>
@@ -57,5 +63,27 @@
         <h1>Empowering Global Business Success</h1>
       </div>
     </main>
+
+    <script>
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      const siteHeader = document.querySelector('.site-header');
+      if (menuToggle && siteHeader) {
+        if (!siteHeader.querySelector('.mobile-nav-links')) {
+          const mobileNav = document.createElement('div');
+          mobileNav.className = 'mobile-nav-links';
+          const navLinks = Array.from(siteHeader.querySelectorAll('.header-group > a'));
+          navLinks.forEach((link) => {
+            const clone = link.cloneNode(true);
+            mobileNav.appendChild(clone);
+          });
+          siteHeader.appendChild(mobileNav);
+        }
+
+        menuToggle.addEventListener('click', () => {
+          const isOpen = siteHeader.classList.toggle('nav-open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+    </script>
   </body>
 </html>

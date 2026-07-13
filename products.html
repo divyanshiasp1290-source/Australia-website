@@ -141,17 +141,60 @@
             }
         }
 
-        @media (max-width: 600px) {
-            .products-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 900px) {
+            .products-hero {
+            height: 320px;
+            margin: 76px calc(-50vw + 50%) 18px;
             }
 
+            .products-container {
+                padding: 0 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+            }
+
+            .product-card-image {
+                height: 220px;
+            }
+
+            .products-hero h1 {
+                font-size: clamp(2.2rem, 6vw, 3rem);
+            }
+        }
+
+        @media (max-width: 600px) {
             .products-hero {
-                height: 300px;
+            height: 280px;
+            margin: 64px calc(-50vw + 50%) 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
 
             .products-container {
                 padding: 0 16px;
+            }
+
+            .product-card-image {
+                height: 200px;
+            }
+
+            .products-hero .hero-overlay {
+                padding: 0 20px;
+            }
+
+            .products-container .products-intro h2 {
+                font-size: 1.6rem;
+                margin-top: 0 !important;
+            }
+
+            .products-container .products-intro p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -170,6 +213,12 @@
                 <div class="brand-subtitle">EDGE PTY LTD</div>
             </a>
         </div>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <div class="header-group header-right">
             <a href="about.html">ABOUT US</a>
@@ -361,6 +410,28 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      const siteHeader = document.querySelector('.site-header');
+      if (menuToggle && siteHeader) {
+        if (!siteHeader.querySelector('.mobile-nav-links')) {
+          const mobileNav = document.createElement('div');
+          mobileNav.className = 'mobile-nav-links';
+          const navLinks = Array.from(siteHeader.querySelectorAll('.header-group > a'));
+          navLinks.forEach((link) => {
+            const clone = link.cloneNode(true);
+            mobileNav.appendChild(clone);
+          });
+          siteHeader.appendChild(mobileNav);
+        }
+
+        menuToggle.addEventListener('click', () => {
+          const isOpen = siteHeader.classList.toggle('nav-open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+    </script>
 </body>
 </html>
 

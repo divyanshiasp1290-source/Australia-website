@@ -96,6 +96,31 @@ html, body {
   color: #1a73e8;
 }
 
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #111;
+}
+
+.mobile-nav-links {
+  display: none;
+}
 .icon {
   display: inline-flex;
   align-items: center;
@@ -218,7 +243,6 @@ html, body {
   margin: 0 calc(-50vw + 50%);
   padding-top: 150px;
 }
-
 
 .hero-section img {
   width: 100vw;
@@ -524,7 +548,17 @@ html, body {
   }
 
   .about-page {
-    margin-top: 120px;
+    margin-top: 60px;
+  }
+
+  .about-section .about-copy,
+  .about-section.alternate .about-copy {
+    order: 1;
+  }
+
+  .about-section .about-image,
+  .about-section.alternate .about-image {
+    order: 2;
   }
 }
 
@@ -695,6 +729,21 @@ html, body {
       right: 0;
     }
 
+    .services-page .hero-section {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      margin-top: 70px;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .services-page .service-grid + .intro-text {
+      margin-top: 6rem;
+    }
+
     .contact-hero img,
     .hero-section img,
     .hero-section-half img {
@@ -732,6 +781,336 @@ h1, h2, h3, h4, h5, h6 {
 .service-card h5,
 .service-card h6 {
   margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+  /* Make hero full-bleed on small screens only (desktop remains unchanged) */
+  .hero-section {
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+    height: auto;
+  }
+
+  .services-page .hero-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 70px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  .hero-section img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+  .site-header {
+    grid-template-columns: auto 1fr auto;
+    height: auto;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .header-group {
+    display: none;
+    justify-content: center;
+    gap: 14px 20px;
+  }
+
+  .site-header.nav-open .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 20px;
+    left: auto;
+    width: min(260px, calc(100vw - 40px));
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(17, 24, 39, 0.12);
+    z-index: 25;
+  }
+
+  .mobile-nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .mobile-nav-links a:hover {
+    color: #1a73e8;
+  }
+
+  .header-left,
+  .header-right {
+    justify-self: auto;
+  }
+
+  .brand-block {
+    justify-self: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .brand-block .brand-link {
+    align-items: flex-start;
+  }
+
+  /* Territory page: stack cards and tighten spacing on mobile only */
+  .territory-page .territory-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 16px;
+    margin-top: 18px;
+  }
+
+  .territory-page .territory-grid article {
+    padding: 18px;
+    min-height: auto;
+    border-radius: 14px;
+  }
+
+  /* Lower the hero overlay on territories page so the heading is visually centered on mobile */
+  .hero-overlay-center {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .brand-mark {
+    font-size: 1.85rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    justify-self: end;
+  }
+
+  .hero-section,
+  .hero-section-half,
+  .contact-hero {
+    height: 360px;
+    min-height: 360px;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  /* Contact page: ensure hero image is full-width on mobile and add spacing below */
+  .contact-hero {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .contact-hero img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .hero-section.homepage-hero {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .hero-overlay,
+  .hero-overlay-center,
+  .contact-hero .hero-overlay {
+    padding: 0 20px;
+  }
+
+  .hero-overlay h1,
+  .hero-overlay-center h1,
+  .contact-hero .hero-overlay h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  .content-section {
+    padding: 0 20px;
+    margin: 20px 0 32px;
+  }
+
+  .content-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .content-row.reverse-row {
+    direction: ltr;
+  }
+
+  .text-block {
+    max-width: 100%;
+  }
+
+  .text-block h2 {
+    margin-top: 0 !important;
+    font-size: clamp(1.6rem, 4vw, 2rem);
+  }
+
+  .text-block p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .image-block {
+    margin-top: 0;
+  }
+
+  .content-row .image-block img {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .service-grid,
+  .territory-grid,
+  .about-section,
+  .about-section.alternate,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-card,
+  .territory-page .territory-grid article {
+    padding: 22px;
+  }
+
+  .about-page {
+    padding: 0 20px;
+    margin-top: 110px;
+  }
+
+  .about-section .about-copy {
+    padding: 0 0 8px;
+  }
+
+  .contact-info-panel,
+  .contact-map-panel {
+    margin-top: 0;
+  }
+
+  .contact-map-panel iframe,
+  .contact-map-panel img {
+    min-height: 320px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0 !important;
+  }
+
+  .products-page h3 {
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .products-grid .product-card {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 14px 16px 12px;
+  }
+
+  .header-group {
+    gap: 10px 14px;
+  }
+
+  .header-group a {
+    font-size: 0.82rem;
+  }
+
+  .brand-mark {
+    font-size: 1.8rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-section,
+  .hero-section-half,
+  .contact-hero {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .hero-section.homepage-hero {
+    height: 60vh;
+    min-height: 340px;
+  }
+
+  .hero-overlay,
+  .hero-overlay-center,
+  .contact-hero .hero-overlay {
+    padding: 0 16px;
+  }
+
+  .content-section {
+    padding: 0 16px;
+  }
+
+  .about-page {
+    padding: 0 16px;
+  }
+
+  .content-row .image-block img {
+    min-height: 220px;
+    height: 220px;
+    border-radius: 16px;
+  }
+
+  /* Extra small screens: nudge territories hero a bit lower for perfect centering */
+  .hero-overlay-center {
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+  .territory-page .territory-grid {
+    padding: 0 12px;
+    gap: 14px;
+  }
+
+  /* Extra-small screens: slightly larger gap under contact hero */
+  .contact-hero {
+    margin-bottom: 36px;
+  }
+
+  .contact-hero img {
+    height: 320px;
+  }
 }
 
 
