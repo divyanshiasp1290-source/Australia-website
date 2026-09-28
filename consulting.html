@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting | YSS Partners | Practical Advice for Complex Business Decisions</title>
+  <meta name="description" content="YSS Partners provides practical consulting support to help organisations clarify priorities, assess challenges and move important initiatives forward." />
+  <link rel="icon" type="image/png" href="assets/images/yssp-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Hero Section (Signature Navy/Sapphire Blue Background) */
+    .consulting-hero {
+      padding: 92px 0 84px;
+      background: linear-gradient(135deg, var(--navy-obsidian) 0%, var(--navy-2) 60%, var(--navy) 100%);
+      color: #ffffff;
+      position: relative;
+    }
+
+    .consulting-hero .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--gold-soft);
+      background: rgba(245, 183, 0, 0.15);
+      border: 1px solid rgba(245, 183, 0, 0.35);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+
+    .consulting-hero h1 {
+      font-size: clamp(34px, 4.8vw, 56px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -1.3px;
+      color: #ffffff;
+      margin: 12px 0 22px;
+      max-width: 860px;
+    }
+
+    .consulting-hero p {
+      font-size: clamp(16px, 2vw, 19.5px);
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.65;
+      max-width: 760px;
+      margin: 0 0 32px;
+    }
+
+    /* Section 02: What We Help With (5-Item Grid) */
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .help-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 34px 28px;
+      border-top: 3px solid var(--navy);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease, border-top-color 0.22s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .help-card:hover {
+      transform: translateY(-2px);
+      border-top-color: var(--gold);
+    }
+
+    .help-card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--sapphire);
+      margin-bottom: 12px;
+    }
+
+    .help-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 12px;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+    }
+
+    .help-card p {
+      font-size: 15px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    /* Section 03: Our Approach (4-Step Process) */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .approach-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 34px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .approach-badge {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+      background: #ffffff;
+      border: 2px solid var(--gold);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .approach-card h3 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .approach-card p {
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Section 04: Who We Support */
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .support-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--sapphire);
+      transition: transform 0.22s ease, border-top-color 0.22s ease;
+    }
+
+    .support-card:hover {
+      transform: translateY(-2px);
+      border-top-color: var(--gold);
+    }
+
+    .support-card-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--gold-text);
+      margin-bottom: 12px;
+    }
+
+    .support-card h3 {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .support-card p {
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Section 05: Why Engage Us */
+    .engage-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .engage-card {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.22s ease;
+      position: relative;
+    }
+
+    .engage-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .engage-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gold-subtle);
+      border: 1px solid #ffe699;
+      color: var(--gold-text);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .engage-card h3 {
+      font-size: 18.5px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .engage-card p {
+      font-size: 14.5px;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1050px) {
+      .approach-grid,
+      .support-grid,
+      .engage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .consulting-hero {
+        padding: 60px 0 48px;
+      }
+
+      .consulting-hero h1 {
+        font-size: clamp(26px, 6vw, 38px);
+        letter-spacing: -0.8px;
+      }
+
+      .help-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .consulting-hero {
+        padding: 48px 0 38px;
+      }
+
+      .approach-grid,
+      .support-grid,
+      .engage-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .help-card,
+      .approach-card,
+      .support-card,
+      .engage-card {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Primary Site Header (Sticky with Top Announcement Bar) -->
+  <header class="site-header">
+    <!-- Top Announcement Bar -->
+    <div class="topbar">
+      Sydney-based B2B trade, export &amp; import, and technology risk solutions
+    </div>
+
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="YSS Partners Home">
+        <img src="assets/images/yssp-logo.png" alt="YSS Partners circular emblem" class="brand-logo" width="52" height="52" />
+        <div class="brand-text">
+          <span class="brand-title">YSS Partners</span>
+          <span class="brand-subtitle">Yellow Sapphire Strategic Partners Pty Ltd</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+
+      <!-- Primary Navigation -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="export-import.html">Export &amp; Import</a>
+        <a href="it-project-risk.html">IT Project and Risk</a>
+        <a href="consulting.html" class="active" aria-current="page">Consulting</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 01 — HERO -->
+    <section class="consulting-hero" aria-labelledby="consulting-headline">
+      <div class="container">
+        <div class="eyebrow">Consulting</div>
+        <h1 id="consulting-headline">Practical advice for complex business decisions</h1>
+        <p>YSS Partners provides practical consulting support to help organisations clarify priorities, assess challenges and move important initiatives forward.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Discuss your requirement</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — WHAT WE HELP WITH -->
+    <section class="content-section" id="what-we-help-with" aria-labelledby="what-we-help-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Consulting Focus</div>
+          <h2 id="what-we-help-heading">What we help with</h2>
+          <p>Practical consulting support across key operational and strategic priorities.</p>
+        </div>
+
+        <div class="help-grid">
+          <article class="help-card" aria-labelledby="area-business-ops">
+            <div class="help-card-tag">Area 01</div>
+            <h3 id="area-business-ops">Business and operational challenges</h3>
+            <p>Assisting organisations to evaluate operational hurdles, clarify strategic priorities, and establish practical paths forward.</p>
+          </article>
+
+          <article class="help-card" aria-labelledby="area-strategy-planning">
+            <div class="help-card-tag">Area 02</div>
+            <h3 id="area-strategy-planning">Strategy and planning</h3>
+            <p>Supporting teams with initiative scoping, milestone structuring, and strategic alignment to ensure clear direction.</p>
+          </article>
+
+          <article class="help-card" aria-labelledby="area-tech-decisions">
+            <div class="help-card-tag">Area 03</div>
+            <h3 id="area-tech-decisions">Project and technology decisions</h3>
+            <p>Providing objective perspectives to evaluate technology options, assess project feasibility, and align delivery expectations.</p>
+          </article>
+
+          <article class="help-card" aria-labelledby="area-risk-governance">
+            <div class="help-card-tag">Area 04</div>
+            <h3 id="area-risk-governance">Risk and governance</h3>
+            <p>Helping make risks, controls, and governance structures visible across important business initiatives.</p>
+          </article>
+
+          <article class="help-card" aria-labelledby="area-process-improvement">
+            <div class="help-card-tag">Area 05</div>
+            <h3 id="area-process-improvement">Process improvement</h3>
+            <p>Reviewing core workflows and operating practices to identify practical efficiencies and improve coordination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — OUR APPROACH -->
+    <section class="content-section soft-bg" id="our-approach" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Engagement Method</div>
+          <h2 id="approach-heading">Our approach</h2>
+          <p>A simple, structured four-step process to clarify challenges, formulate practical recommendations, and maintain delivery momentum.</p>
+        </div>
+
+        <div class="approach-grid">
+          <div class="approach-card">
+            <div class="approach-badge" aria-hidden="true">01</div>
+            <h3>Understand</h3>
+            <p>Understand the situation, objectives and constraints.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-badge" aria-hidden="true">02</div>
+            <h3>Assess</h3>
+            <p>Identify key challenges, risks and priorities.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-badge" aria-hidden="true">03</div>
+            <h3>Advise</h3>
+            <p>Develop practical recommendations and possible next steps.</p>
+          </div>
+
+          <div class="approach-card">
+            <div class="approach-badge" aria-hidden="true">04</div>
+            <h3>Support</h3>
+            <p>Help provide structure and support as the agreed next steps progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — WHO WE SUPPORT -->
+    <section class="content-section" id="who-we-support" aria-labelledby="who-we-support-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Stakeholder Alignment</div>
+          <h2 id="who-we-support-heading">Who we support</h2>
+          <p>We work alongside key decision-makers and delivery teams facing critical strategic and operational inflection points.</p>
+        </div>
+
+        <div class="support-grid">
+          <article class="support-card" aria-labelledby="stakeholder-leaders">
+            <div class="support-card-tag">Leadership</div>
+            <h3 id="stakeholder-leaders">Business leaders</h3>
+            <p>Executives and directors seeking an objective sounding board and practical perspective on strategic priorities.</p>
+          </article>
+
+          <article class="support-card" aria-labelledby="stakeholder-sponsors">
+            <div class="support-card-tag">Governance</div>
+            <h3 id="stakeholder-sponsors">Project sponsors</h3>
+            <p>Senior stakeholders accountable for ensuring complex initiatives are structured for viable, accountable delivery.</p>
+          </article>
+
+          <article class="support-card" aria-labelledby="stakeholder-change">
+            <div class="support-card-tag">Transition</div>
+            <h3 id="stakeholder-change">Organisations going through change</h3>
+            <p>Enterprises navigating operational transitions, structural shifts, or strategic realignment.</p>
+          </article>
+
+          <article class="support-card" aria-labelledby="stakeholder-teams">
+            <div class="support-card-tag">Delivery</div>
+            <h3 id="stakeholder-teams">Teams facing complex business or technology decisions</h3>
+            <p>Cross-functional teams evaluating critical options, trade-offs, and implementation routes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — WHY ENGAGE US -->
+    <section class="content-section soft-bg" id="why-engage-us" aria-labelledby="why-engage-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Engagement Value</div>
+          <h2 id="why-engage-heading">Why engage us</h2>
+          <p>Disciplined support focused on clarity, practical outcomes, and objective alignment.</p>
+        </div>
+
+        <div class="engage-grid">
+          <div class="engage-card">
+            <div class="engage-icon" aria-hidden="true">&#10003;</div>
+            <h3>Practical advice</h3>
+            <p>Grounded, viable guidance focused on realistic implementation and actionable next steps.</p>
+          </div>
+
+          <div class="engage-card">
+            <div class="engage-icon" aria-hidden="true">&#10003;</div>
+            <h3>Clear decision support</h3>
+            <p>Objective framing and structured analysis to help leadership evaluate options with confidence.</p>
+          </div>
+
+          <div class="engage-card">
+            <div class="engage-icon" aria-hidden="true">&#10003;</div>
+            <h3>Structured approach</h3>
+            <p>A disciplined, milestone-based methodology that maintains visibility and accountability throughout.</p>
+          </div>
+
+          <div class="engage-card">
+            <div class="engage-icon" aria-hidden="true">&#10003;</div>
+            <h3>Independent perspective</h3>
+            <p>Unbiased, partner-led review that clarifies priorities without conflicting commercial agendas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — CLOSING CALL TO ACTION -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-flex">
+        <div class="cta-copy">
+          <h2 id="cta-heading">Let’s discuss your requirement</h2>
+          <p>Share what you are working through and we can discuss a practical starting point.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Contact YSS Partners</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/yssp-logo.png" alt="YSS Partners emblem" class="footer-logo" width="56" height="56" />
+          <h3>YSS Partners</h3>
+          <p>YSS Partners is the trading name of Yellow Sapphire Strategic Partners Pty Ltd. Sydney-based B2B solutions across international trade, commercial supply, and technology risk consulting.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a>
+            <a href="export-import.html">Export &amp; Import</a>
+            <a href="it-project-risk.html">IT Project and Risk</a>
+            <a href="consulting.html">Consulting</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <nav aria-label="Contact Information">
+            <a href="mailto:enquiries@ysspartners.com">enquiries@ysspartners.com</a>
+            <span>Sydney, Australia</span>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Yellow Sapphire Strategic Partners Pty Ltd. All rights reserved.</span>
+        <span>Trading name: YSS Partners</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep page content perfectly positioned below fixed header
+    function syncHeaderHeight() {
+      const header = document.querySelector('header.site-header');
+      if (header) {
+        document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+      }
+    }
+    syncHeaderHeight();
+    window.addEventListener('resize', syncHeaderHeight);
+    window.addEventListener('orientationchange', syncHeaderHeight);
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const primaryNav = document.getElementById('primaryNav');
+    if (mobileBtn && primaryNav) {
+      mobileBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = primaryNav.classList.toggle('is-open');
+        mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close menu when clicking any nav link
+      primaryNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!primaryNav.contains(e.target) && !mobileBtn.contains(e.target)) {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && primaryNav.classList.contains('is-open')) {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          mobileBtn.focus();
+        }
+      });
+    }
+  </script>
+</body>
+</html>
