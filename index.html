@@ -1,89 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Australia</title>
-    <meta name="description" content="Simple white landing page with a centered header and a single hero image." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-group header-left">
-        <a href="services.html">SERVICES</a>
-        <a href="products.html">PRODUCTS</a>
-        <a href="territory.html">THE TERRITORIES</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YSS Partners | Trade. Technology. Delivery. | Sydney, Australia</title>
+  <meta name="description" content="YSS Partners connects suppliers, buyers and organisations with practical support across export and import, IT project delivery and risk governance." />
+  <link rel="icon" type="image/png" href="assets/images/yssp-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-      <div class="brand-block">
-        <a class="brand-link" href="index.html">
-          <div class="brand-mark">YYSP</div>
-          <div class="brand-subtitle">PTY LTD</div>
-        </a>
-      </div>
+  <!-- Primary Site Header (Sticky with Top Announcement Bar) -->
+  <header class="site-header">
+    <!-- Top Announcement Bar -->
+    <div class="topbar">
+      Sydney-based B2B trade, export &amp; import, and technology risk solutions
+    </div>
 
-      <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="YSS Partners Home">
+        <img src="assets/images/yssp-logo.png" alt="YSS Partners circular emblem" class="brand-logo" width="52" height="52" />
+        <div class="brand-text">
+          <span class="brand-title">YSS Partners</span>
+          <span class="brand-subtitle">Yellow Sapphire Strategic Partners Pty Ltd</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span aria-hidden="true">&#9776;</span>
       </button>
 
-      <div class="header-group header-right">
-        <a href="about.html">ABOUT US</a>
-        <a href="contact.html">CONTACT</a>
-        <div class="social-links">
-          <a href="https://www.instagram.com" aria-label="Instagram" class="social-icon">
-            <svg viewBox="0 0 512 512" width="18" height="18" fill="currentColor" aria-hidden="true">
-              <path d="M349.33 69.33H162.67C109.57 69.33 69.33 109.57 69.33 162.67v186.67C69.33 402.43 109.57 442.67 162.67 442.67h186.67c53.1 0 93.33-40.24 93.33-93.33V162.67c0-53.1-40.24-93.34-93.34-93.34zm62.67 280c0 34.49-28.18 62.67-62.67 62.67H162.67c-34.49 0-62.67-28.18-62.67-62.67V162.67c0-34.49 28.18-62.67 62.67-62.67h186.67c34.49 0 62.67 28.18 62.67 62.67v186.66z"/>
-              <path d="M256 170.67c-46.67 0-85.33 38.67-85.33 85.33S209.33 341.33 256 341.33 341.33 302.67 341.33 256 302.67 170.67 256 170.67zm0 138.66c-29.41 0-53.33-23.92-53.33-53.33s23.92-53.33 53.33-53.33 53.33 23.92 53.33 53.33-23.92 53.33-53.33 53.33z"/>
-              <circle cx="377.33" cy="134.67" r="21.33"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com" aria-label="Facebook" class="social-icon">
-            <svg viewBox="0 0 320 512" width="18" height="18" fill="currentColor" aria-hidden="true">
-              <path d="M279.14 288l14.22-92.66h-88.91V134.33c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.36 0 225.36 0c-73.22 0-121.09 44.38-121.09 124.72V195.3H22.89V288h81.38v224h100.2V288z"/>
-            </svg>
-          </a>
+      <!-- Primary Navigation (Exactly 5 Items) -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Main Navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="export-import.html">Export &amp; Import</a>
+        <a href="it-project-risk.html">IT Project and Risk</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 01 — HERO -->
+    <section class="hero-section-base" aria-labelledby="home-headline">
+      <div class="container home-hero-layout">
+        <div>
+          <div class="eyebrow">YSS Partners</div>
+          <h1 id="home-headline">Trade. Technology. Delivery.</h1>
+          <p>YSS Partners connects suppliers, buyers and organisations with practical support across export and import, IT project delivery and risk governance. We turn commercial opportunities into clear, manageable action.</p>
+          <div class="hero-actions">
+            <a href="#capabilities" class="btn btn-primary">Explore our capabilities</a>
+            <a href="contact.html" class="btn btn-secondary">Start a conversation</a>
+          </div>
+        </div>
+        <div class="hero-emblem-card">
+          <img src="assets/images/yssp-logo.png" alt="YSS Partners official circular logo" class="hero-emblem-img" width="180" height="180" />
+          <span class="hero-emblem-badge">Operating Platform</span>
+          <h2 class="hero-emblem-title">Yellow Sapphire Strategic Partners</h2>
+          <p class="hero-emblem-sub">Commercial Trade &amp; Technology Risk Governance &bull; Sydney, Australia</p>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main class="hero-section homepage-hero">
-      <img
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80"
-        alt="Scenic Australian coastline over water"
-      />
-      <div class="hero-overlay">
-        <h1>Empowering Global Business Success</h1>
+    <!-- SECTION 02 — TRUST STRIP -->
+    <section class="trust-strip" aria-label="Key Qualifications">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>Sydney based</strong>
+          <span>Australian operational platform</span>
+        </div>
+        <div class="trust-item">
+          <strong>Commercially practical</strong>
+          <span>Focused on viable execution</span>
+        </div>
+        <div class="trust-item">
+          <strong>Partner led</strong>
+          <span>Direct senior alignment</span>
+        </div>
+        <div class="trust-item">
+          <strong>Governed delivery</strong>
+          <span>Clear milestones and controls</span>
+        </div>
       </div>
-    </main>
+    </section>
 
-    <script>
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
-      const siteHeader = document.querySelector('.site-header');
-      if (menuToggle && siteHeader) {
-        if (!siteHeader.querySelector('.mobile-nav-links')) {
-          const mobileNav = document.createElement('div');
-          mobileNav.className = 'mobile-nav-links';
-          const navLinks = Array.from(siteHeader.querySelectorAll('.header-group > a'));
-          navLinks.forEach((link) => {
-            const clone = link.cloneNode(true);
-            mobileNav.appendChild(clone);
-          });
-          siteHeader.appendChild(mobileNav);
-        }
+    <!-- SECTION 03 — TWO CORE CAPABILITIES -->
+    <section class="content-section" id="capabilities" aria-labelledby="capabilities-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Capabilities</div>
+          <h2 id="capabilities-heading">Two core capabilities. One dependable partner.</h2>
+          <p>We combine commercial trade facilitation with technology governance to help businesses grow and deliver with confidence.</p>
+        </div>
 
-        menuToggle.addEventListener('click', () => {
-          const isOpen = siteHeader.classList.toggle('nav-open');
-          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
+        <div class="capabilities-grid">
+          <!-- Capability 1: Export and Import -->
+          <article class="capability-card" id="export-import" aria-labelledby="cap-trade-title">
+            <div class="capability-card-header">
+              <span class="capability-ghost-num" aria-hidden="true">01 &bull; Commercial Trade</span>
+              <h3 id="cap-trade-title">Export and Import</h3>
+              <p>Commercial sourcing and market support for Australian products and selected business supplies. We help buyers and suppliers clarify requirements, align commercial expectations and coordinate the path from enquiry to fulfilment.</p>
+            </div>
+            <div>
+              <a href="export-import.html" class="btn btn-primary">Explore Export &amp; Import</a>
+            </div>
+          </article>
+
+          <!-- Capability 2: IT Project and Risk -->
+          <article class="capability-card" id="it-project-risk" aria-labelledby="cap-it-title">
+            <div class="capability-card-header">
+              <span class="capability-ghost-num" aria-hidden="true">02 &bull; Risk &amp; Governance</span>
+              <h3 id="cap-it-title">IT Project and Risk</h3>
+              <p>Practical support for organisations planning, governing and delivering technology and AI-enabled change. We help make ownership, controls, risks and decisions visible from build through validation.</p>
+            </div>
+            <div>
+              <a href="it-project-risk.html" class="btn btn-primary">Explore IT Project and Risk</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — ABOUT YSSP -->
+    <section class="content-section soft-bg" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-corp-layout">
+          <div class="about-corp-copy">
+            <div class="eyebrow" style="color:var(--navy);">About YSSP</div>
+            <h2 id="about-heading">Where commerce, capability and disciplined execution come together</h2>
+            <p>Yellow Sapphire Strategic Partners Pty Ltd is an Australian commercial and operating platform. We connect markets, products, specialist capability and practical delivery to help worthwhile opportunities move forward with clarity and accountability.</p>
+            <p>Our work spans two complementary areas: trade and supply, where relationships and execution create commercial value; and IT project and risk, where governance helps organisations build and deliver responsibly.</p>
+            <div style="margin-top:28px;">
+              <a href="about.html" class="btn btn-primary" style="display:inline-block; width:auto;">About YSSP</a>
+            </div>
+          </div>
+          <div class="about-corp-card">
+            <span class="about-corp-badge">Platform Overview</span>
+            <h3>Disciplined Australian Operations</h3>
+            <p>Providing executive leadership and hands-on governance to ensure commercial and technology initiatives deliver verified value.</p>
+            <div class="about-corp-meta">
+              <span>&#10003; Trade facilitation</span>
+              <span>&#10003; Risk governance</span>
+              <span>&#10003; Australian registered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — VISION AND MISSION -->
+    <section class="content-section" aria-labelledby="vm-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Our Purpose</div>
+          <h2 id="vm-heading">Vision and Mission</h2>
+          <p>Our ambition and operating intent guide every commercial partnership and delivery milestone.</p>
+        </div>
+        <div class="vision-mission-grid">
+          <div class="vm-box vision-box">
+            <span class="vm-label">Vision</span>
+            <h3>Connected Commercial Ecosystem</h3>
+            <p>To build a connected commercial ecosystem where credible people, products and ideas have a fair opportunity to create lasting value.</p>
+          </div>
+          <div class="vm-box mission-box">
+            <span class="vm-label">Mission</span>
+            <h3>Disciplined Execution</h3>
+            <p>To unite suppliers, buyers, markets and specialist capabilities; structure opportunities clearly; and support disciplined execution from first conversation through delivery and validation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — HOW WE WORK -->
+    <section class="content-section soft-bg" id="methodology" aria-labelledby="how-we-work-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" style="color:var(--navy);">Operating Method</div>
+          <h2 id="how-we-work-heading">How we work</h2>
+          <p>A consistent, disciplined four-stage approach applied across both trade and technology governance.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-badge" aria-hidden="true">01</div>
+            <h3>Understand</h3>
+            <p>We clarify the requirement, desired outcome, constraints and decision makers.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-badge" aria-hidden="true">02</div>
+            <h3>Structure</h3>
+            <p>We define scope, responsibilities, commercial terms, risks and the practical route forward.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-badge" aria-hidden="true">03</div>
+            <h3>Execute</h3>
+            <p>We coordinate the agreed work, maintain visibility and address issues as they emerge.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-badge" aria-hidden="true">04</div>
+            <h3>Validate</h3>
+            <p>We confirm the outcome, capture evidence and identify the next decision or improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07 — CLOSING CALL TO ACTION -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-flex">
+        <div class="cta-copy">
+          <h2 id="cta-heading">What are you trying to move forward?</h2>
+          <p>Whether the requirement involves cross-border sourcing, a technology initiative or a risk and governance challenge, start with a practical conversation about the outcome you need.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary">Start a conversation</a>
+          <a href="contact.html?enquiry=general" class="btn btn-secondary">Contact YSS Partners</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/yssp-logo.png" alt="YSS Partners emblem" class="footer-logo" width="56" height="56" />
+          <h3>YSS Partners</h3>
+          <p>YSS Partners is the trading name of Yellow Sapphire Strategic Partners Pty Ltd. Sydney-based B2B solutions across international trade, commercial supply, and technology risk consulting.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <nav aria-label="Footer Navigation">
+            <a href="index.html">Home</a>
+            <a href="export-import.html">Export &amp; Import</a>
+            <a href="it-project-risk.html">IT Project and Risk</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <nav aria-label="Contact Information">
+            <a href="mailto:enquiries@ysspartners.com">enquiries@ysspartners.com</a>
+            <span>Sydney, Australia</span>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Yellow Sapphire Strategic Partners Pty Ltd. All rights reserved.</span>
+        <span>Trading name: YSS Partners</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep page content perfectly positioned below fixed header
+    function syncHeaderHeight() {
+      const header = document.querySelector('header.site-header');
+      if (header) {
+        document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
       }
-    </script>
-  </body>
+    }
+    syncHeaderHeight();
+    window.addEventListener('resize', syncHeaderHeight);
+    window.addEventListener('orientationchange', syncHeaderHeight);
+
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const primaryNav = document.getElementById('primaryNav');
+    if (mobileBtn && primaryNav) {
+      mobileBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = primaryNav.classList.toggle('is-open');
+        mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close menu when clicking any nav link
+      primaryNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function (e) {
+        if (!primaryNav.contains(e.target) && !mobileBtn.contains(e.target)) {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && primaryNav.classList.contains('is-open')) {
+          primaryNav.classList.remove('is-open');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+          mobileBtn.focus();
+        }
+      });
+    }
+  </script>
+</body>
 </html>
